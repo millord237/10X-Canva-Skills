@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.canva.dev)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Anit\\\\Downloads\\\\10x-Canva-Skills\\\\.env.example\" -Force)",
+      "Bash(python setup.py:*)",
+      "Skill(canva-explorer)",
+      "Bash(\".venv/Scripts/python.exe\" scripts/list_folders.py)",
+      "Bash(\".venv/Scripts/python.exe\":*)",
+      "Bash(\".venv/Scripts/python.exe\" -c \"\nimport sys\nsys.path.insert\\(0, ''scripts''\\)\nfrom canva_client import get_client\nclient = get_client\\(\\)\nprint\\(''Access token loaded:'', bool\\(client.access_token\\)\\)\nif client.access_token:\n    print\\(''Token prefix:'', client.access_token[:30]\\)\n\")",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}
